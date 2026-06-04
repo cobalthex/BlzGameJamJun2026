@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://c7qxddw34jor"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4qk24"]
+shading_mode = 0
+albedo_color = Color(0.51734346, 0.41348645, 0.24441287, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_wrjmx"]
+material = SubResource("StandardMaterial3D_4qk24")
+size = Vector2(100, 100)
+
+[node name="Level" type="Node3D" unique_id=403356144]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=877547179]
+mesh = SubResource("PlaneMesh_wrjmx")
