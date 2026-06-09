@@ -1,0 +1,166 @@
+[gd_scene format=3 uid="uid://dx5xpocm2ypdy"]
+
+[ext_resource type="Texture2D" uid="uid://dy4f7ye8c4hfb" path="res://assets/prototyping/kenney_prototype-textures/PNG/Dark/texture_09.png" id="1_ma76e"]
+[ext_resource type="Texture2D" uid="uid://biwhhi6kd2v1x" path="res://assets/prototyping/kenney_prototype-textures/PNG/Orange/texture_02.png" id="2_ma76e"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6cukt"]
+albedo_texture = ExtResource("1_ma76e")
+uv1_triplanar = true
+uv1_world_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3rgvj"]
+albedo_texture = ExtResource("2_ma76e")
+uv1_triplanar = true
+uv1_world_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hjfax"]
+albedo_texture = ExtResource("2_ma76e")
+uv1_triplanar = true
+uv1_world_triplanar = true
+
+[node name="BrTest" type="Node3D" unique_id=147827947]
+
+[node name="Level Geo" type="Node" parent="." unique_id=1187643138]
+
+[node name="Room" type="CSGBox3D" parent="Level Geo" unique_id=251159192]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+flip_faces = true
+size = Vector3(20, 3, 20)
+material = SubResource("StandardMaterial3D_6cukt")
+
+[node name="Thick Pillar" type="CSGBox3D" parent="Level Geo" unique_id=299026041]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1.5, -2)
+size = Vector3(2, 3, 2)
+material = SubResource("StandardMaterial3D_3rgvj")
+
+[node name="Thick Pillar3" type="CSGBox3D" parent="Level Geo" unique_id=1937569941]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 1.5, 6)
+size = Vector3(2, 3, 2)
+material = SubResource("StandardMaterial3D_3rgvj")
+
+[node name="Thick Pillar2" type="CSGBox3D" parent="Level Geo" unique_id=1679701542]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 1.5, 1)
+size = Vector3(2, 3, 2)
+material = SubResource("StandardMaterial3D_3rgvj")
+
+[node name="Pillar" type="CSGBox3D" parent="Level Geo" unique_id=1585643013]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 7)
+size = Vector3(1, 3, 1)
+material = SubResource("StandardMaterial3D_3rgvj")
+
+[node name="Pillar2" type="CSGBox3D" parent="Level Geo" unique_id=2021674735]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1.5, -8)
+size = Vector3(1, 3, 1)
+material = SubResource("StandardMaterial3D_3rgvj")
+
+[node name="Wall_Trimmed" type="CSGCombiner3D" parent="Level Geo" unique_id=856181493]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -6)
+use_collision = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Level Geo/Wall_Trimmed" unique_id=1087861182]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 1.5, 0)
+size = Vector3(8, 3, 1)
+material = SubResource("StandardMaterial3D_hjfax")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Level Geo/Wall_Trimmed" unique_id=993033370]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0.100000024, 0)
+size = Vector3(8.1, 0.2, 1.1)
+material = SubResource("StandardMaterial3D_hjfax")
+
+[node name="Wall_Trimmed2" type="CSGCombiner3D" parent="Level Geo" unique_id=1812999234]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3, 0, 5)
+use_collision = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Level Geo/Wall_Trimmed2" unique_id=8959786]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1.5, 0)
+size = Vector3(6, 3, 1)
+material = SubResource("StandardMaterial3D_hjfax")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Level Geo/Wall_Trimmed2" unique_id=1918198738]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0.1, 0)
+size = Vector3(6.1, 0.2, 1.1)
+material = SubResource("StandardMaterial3D_hjfax")
+
+[node name="Wall_Trimmed3" type="CSGCombiner3D" parent="Level Geo" unique_id=963358527]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 7)
+use_collision = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Level Geo/Wall_Trimmed3" unique_id=1984559337]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 1.5, 0)
+size = Vector3(8, 3, 1)
+material = SubResource("StandardMaterial3D_hjfax")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Level Geo/Wall_Trimmed3" unique_id=818337185]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0.1, 0)
+size = Vector3(8.1, 0.2, 1.1)
+material = SubResource("StandardMaterial3D_hjfax")
+
+[node name="Wall_Trimmed4" type="CSGCombiner3D" parent="Level Geo" unique_id=1295459970]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -7.5, 0, -4.5)
+use_collision = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Level Geo/Wall_Trimmed4" unique_id=775067030]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 1.5, 0)
+size = Vector3(8, 3, 1)
+material = SubResource("StandardMaterial3D_hjfax")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Level Geo/Wall_Trimmed4" unique_id=1059255281]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0.1, 0)
+size = Vector3(8.1, 0.2, 1.1)
+material = SubResource("StandardMaterial3D_hjfax")
+
+[node name="Wall_Trimmed5" type="CSGCombiner3D" parent="Level Geo" unique_id=219888125]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -4.5, 0, 5.5)
+use_collision = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Level Geo/Wall_Trimmed5" unique_id=1702990466]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+size = Vector3(2, 3, 1)
+material = SubResource("StandardMaterial3D_hjfax")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Level Geo/Wall_Trimmed5" unique_id=2068092308]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
+size = Vector3(2.1, 0.2, 1.1)
+material = SubResource("StandardMaterial3D_hjfax")
+
+[node name="Wall_Trimmed6" type="CSGCombiner3D" parent="Level Geo" unique_id=1125595117]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 6, 0, -9)
+use_collision = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Level Geo/Wall_Trimmed6" unique_id=119315758]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1.5, -2.3841858e-07)
+size = Vector3(6, 3, 1)
+material = SubResource("StandardMaterial3D_hjfax")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Level Geo/Wall_Trimmed6" unique_id=1205575850]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0.100000024, 0)
+size = Vector3(6.1, 0.2, 1.1)
+material = SubResource("StandardMaterial3D_hjfax")
+
+[node name="Wall_Trimmed7" type="CSGCombiner3D" parent="Level Geo" unique_id=1116576233]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 1, 0, -3.5)
+use_collision = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Level Geo/Wall_Trimmed7" unique_id=1199763474]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1.5, -4.7683716e-07)
+size = Vector3(6, 3, 1)
+material = SubResource("StandardMaterial3D_hjfax")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Level Geo/Wall_Trimmed7" unique_id=408405028]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0.1, -2.3841858e-07)
+size = Vector3(6.1, 0.2, 1.1)
+material = SubResource("StandardMaterial3D_hjfax")
+
+[node name="Wall_Trimmed8" type="CSGCombiner3D" parent="Level Geo" unique_id=1155642863]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 7.5, 0, 5.5)
+use_collision = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Level Geo/Wall_Trimmed8" unique_id=1804993391]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+size = Vector3(2, 3, 1)
+material = SubResource("StandardMaterial3D_hjfax")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Level Geo/Wall_Trimmed8" unique_id=1695069443]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
+size = Vector3(2.1, 0.2, 1.1)
+material = SubResource("StandardMaterial3D_hjfax")
