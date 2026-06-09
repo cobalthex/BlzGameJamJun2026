@@ -53,8 +53,6 @@ public partial class Player : CharacterBody3D
 		MoveAndSlide();
 	}
 
-	private readonly Quaternion c_quatFwd = new Quaternion(Vector3.Right, 0);
-
 	public override void _Input(InputEvent @event)
 	{
 		if (@event is InputEventMouseMotion mouseMove)
@@ -63,7 +61,7 @@ public partial class Player : CharacterBody3D
 
 			float pitch = -mouseMove.Relative.Y * MouseScale;
 			var camRot = m_fpcam.Rotation;
-			camRot.X = Mathf.Clamp(camRot.X + pitch, -Mathf.Pi / 2, Mathf.Pi / 2);
+			camRot.X = Mathf.Clamp(camRot.X + pitch, -Mathf.Pi / 2 + 0.0001f, Mathf.Pi / 2 - 0.0001f);
 			m_fpcam.Rotation = camRot; // quat?
         }
 	}

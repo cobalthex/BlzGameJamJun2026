@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c7qxddw34jor"]
 
-[ext_resource type="Script" uid="uid://dceanfpyo6dv7" path="res://player/Player.cs" id="1_wrjmx"]
+[ext_resource type="PackedScene" uid="uid://bhxyhadfgysrk" path="res://player/player.tscn" id="1_wrjmx"]
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_wrjmx"]
 points = PackedVector3Array(-50, 0, -50, -50, 0, 50, 50, 0, -50, 50, 0, 50)
@@ -51,10 +51,6 @@ points = PackedVector3Array(50, 5, 0.5, 50, 5, -0.5, -50, 5, 0.5, 50, -5, 0.5, 5
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_d7c2j"]
 points = PackedVector3Array(50, 5, 0.5, 50, 5, -0.5, -50, 5, 0.5, 50, -5, 0.5, 50, -5, -0.5, -50, 5, -0.5, -50, -5, 0.5, -50, -5, -0.5)
-
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ckvac"]
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_jk5si"]
 
 [node name="Level" type="Node3D" unique_id=403356144]
 
@@ -120,15 +116,5 @@ shape = SubResource("ConvexPolygonShape3D_d7c2j")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Geo/Wall4" unique_id=1451351771]
 mesh = SubResource("BoxMesh_s8cvy")
 
-[node name="Player" type="CharacterBody3D" parent="." unique_id=1576411132]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.067, 1, -16.732)
-script = ExtResource("1_wrjmx")
-
-[node name="fpcam" type="Camera3D" parent="Player" unique_id=874153170]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0.8, 0)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Player" unique_id=2040985231]
-shape = SubResource("CapsuleShape3D_ckvac")
-
-[node name="shape" type="MeshInstance3D" parent="Player/CollisionShape3D" unique_id=86877711]
-mesh = SubResource("CapsuleMesh_jk5si")
+[node name="Player" parent="." unique_id=938892595 instance=ExtResource("1_wrjmx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.067, 0.7541386, -16.732)

@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://bhxyhadfgysrk"]
+
+[ext_resource type="Script" uid="uid://dceanfpyo6dv7" path="res://player/Player.cs" id="1_oul6g"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ckvac"]
+radius = 0.35
+height = 1.5
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_jk5si"]
+radius = 0.35
+height = 1.5
+
+[node name="Player" type="CharacterBody3D" unique_id=938892595]
+script = ExtResource("1_oul6g")
+
+[node name="fpcam" type="Camera3D" parent="." unique_id=940797368]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0.5920052, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=534085004]
+shape = SubResource("CapsuleShape3D_ckvac")
+
+[node name="shape" type="MeshInstance3D" parent="CollisionShape3D" unique_id=1710695446]
+mesh = SubResource("CapsuleMesh_jk5si")
