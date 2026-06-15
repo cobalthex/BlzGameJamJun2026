@@ -55,12 +55,13 @@ void fragment()
         dist_to_sense_sphere);
     float sense_mask = tail * head;
 
+    // todo: only draw on edges?
     // todo: edge radius should hide under trailing radius near finish
     float edge_overlay = sense_mask * smoothstep(
         sense_sphere_leading_radius - edge_radius,
         sense_sphere_leading_radius,
         dist_to_sense_sphere);
-        
+
     vec4 tex = texture(albedo_tex, UV);
     EMISSION = mix(flat_color, edge_color, edge_overlay) * (1.0 - sense_mask);
     ALBEDO = mix(flat_color, tex.rgb, sense_mask);

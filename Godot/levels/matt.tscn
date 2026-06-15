@@ -56,7 +56,7 @@ shader_parameter/sense_sphere_trailing_fade = 10.0
 shader_parameter/sense_sphere_leading_fade = 1.0
 shader_parameter/flat_color = Color(0.7360299, 0.687395, 0.58122593, 1)
 shader_parameter/albedo_tex = ExtResource("3_s8cvy")
-shader_parameter/uv_scale = Vector2(10, 10)
+shader_parameter/uv_scale = Vector2(100, 10)
 shader_parameter/edge_color = Color(0.4, 0.9, 1, 1)
 shader_parameter/edge_radius = 10.0
 
@@ -74,7 +74,7 @@ shader_parameter/sense_sphere_trailing_fade = 10.0
 shader_parameter/sense_sphere_leading_fade = 1.0
 shader_parameter/flat_color = Color(0.7360299, 0.687395, 0.58122593, 1)
 shader_parameter/albedo_tex = ExtResource("3_s8cvy")
-shader_parameter/uv_scale = Vector2(10, 10)
+shader_parameter/uv_scale = Vector2(100, 10)
 shader_parameter/edge_color = Color(0.4, 0.9, 1, 1)
 shader_parameter/edge_radius = 10.0
 
@@ -92,7 +92,7 @@ shader_parameter/sense_sphere_trailing_fade = 10.0
 shader_parameter/sense_sphere_leading_fade = 1.0
 shader_parameter/flat_color = Color(0.7360299, 0.687395, 0.58122593, 1)
 shader_parameter/albedo_tex = ExtResource("3_s8cvy")
-shader_parameter/uv_scale = Vector2(10, 10)
+shader_parameter/uv_scale = Vector2(100, 10)
 shader_parameter/edge_color = Color(0.4, 0.9, 1, 1)
 shader_parameter/edge_radius = 10.0
 

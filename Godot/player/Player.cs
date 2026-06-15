@@ -11,11 +11,11 @@ public partial class Player : CharacterBody3D
     public bool NoPulseDelay { get; set; } = true;
 
     [Export]
-    public float PulseMaxRadius { get; set;} = 40.0f; // increase as game progresses?
+    public float PulseHeadSpeed { get; set; } = 20.0f; // per sec
     [Export]
-    public float PulseSpeed { get; set; } = 30.0f; // per sec
+    public float PulseTailSpeed { get; set; } = 40.0f;
     [Export]
-    public float PulseTailOffset { get; set; } = -30.0f;
+    public float PulseTailOffset { get; set; } = -60.0f;
     
     // perhaps instead of clamping radius, have faster tail vs head speed and cancel when tail overtakes?
 
@@ -127,7 +127,7 @@ public partial class Player : CharacterBody3D
             if (keyEvent.IsActionPressed("primary_action") &&
                 (m_pulse == null || NoPulseDelay))
             {
-                m_pulse = new Pulse(GlobalTransform.Origin, PulseMaxRadius, PulseSpeed, PulseTailOffset);
+                m_pulse = new Pulse(GlobalTransform.Origin, PulseTailSpeed, PulseHeadSpeed, PulseTailOffset);
             }
         }
     }
@@ -146,16 +146,17 @@ class Pulse
     public float TrailingRadius { get; private set; }
     public float LeadingRadius { get; private set; }
 
-    readonly float m_maxRadius;
-    readonly float m_speed;
+    readonly float m_tailSpeed;
+    readonly float m_headSpeed;
     readonly float m_tailOffset;
 
-    public Pulse(Vector3 center, float maxRadius, float speed, float tailOffset)
+    public Pulse(Vector3 center, float tailSpeed, float headSpeed, float tailOffset)
     {
         Origin = center;
-        m_maxRadius = maxRadius;
-        m_speed = speed;
-        
+        m_tailSpeed = tailSpeed;
+        m_headSpeed = headSpeed;
+        m_tailOffset = tailOffset;
+
         TrailingRadius = tailOffset;
         LeadingRadius = 0.0f;
 
@@ -166,14 +167,16 @@ class Pulse
 
     public CompletionStatus Update(double delta)
     {
-        if (TrailingRadius >= m_maxRadius)
+        TrailingRadius += (float)(m_tailSpeed * delta);
+        LeadingRadius += (float)(m_headSpeed * delta);
+        
+        if (TrailingRadius >= LeadingRadius)
         {
             RenderingServer.GlobalShaderParameterSet("sense_sphere_trailing_radius", 0);
             RenderingServer.GlobalShaderParameterSet("sense_sphere_leading_radius", 0);
             return CompletionStatus.Completed;
         }
-        TrailingRadius = Mathf.Min(m_maxRadius, (float)(TrailingRadius + m_speed * delta));
-        LeadingRadius = Mathf.Min(m_maxRadius, (float)(LeadingRadius + m_speed * delta));
+
         RenderingServer.GlobalShaderParameterSet("sense_sphere_trailing_radius", TrailingRadius);
         RenderingServer.GlobalShaderParameterSet("sense_sphere_leading_radius", LeadingRadius);
 
