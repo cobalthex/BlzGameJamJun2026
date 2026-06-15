@@ -24,6 +24,10 @@ window/size/viewport_height=900
 
 project/assembly_name="SolidPing"
 
+[global_group]
+
+Interactable=""
+
 [input]
 
 move_forward={
@@ -56,6 +60,11 @@ secondary_action={
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":81,"key_label":0,"unicode":113,"location":0,"echo":false,"script":null)
 ]
 }
+capture_mouse={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":96,"key_label":0,"unicode":96,"location":0,"echo":false,"script":null)
+]
+}
 
 [physics]
 
@@ -64,3 +73,18 @@ secondary_action={
 [rendering]
 
 rendering_device/driver.windows="d3d12"
+
+[shader_globals]
+
+sense_sphere_center={
+"type": "vec3",
+"value": Vector3(0, 0, 0)
+}
+sense_sphere_trailing_radius={
+"type": "float",
+"value": 0.0
+}
+sense_sphere_leading_radius={
+"type": "float",
+"value": 0.0
+}

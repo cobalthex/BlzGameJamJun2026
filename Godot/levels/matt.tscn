@@ -1,26 +1,46 @@
 [gd_scene format=3 uid="uid://c7qxddw34jor"]
 
+[ext_resource type="Shader" uid="uid://ou5y6x1nbf17" path="res://player/Sensed.gdshader" id="1_7ntvd"]
 [ext_resource type="PackedScene" uid="uid://bhxyhadfgysrk" path="res://player/player.tscn" id="1_wrjmx"]
+[ext_resource type="Texture2D" uid="uid://4dpqt4ijcdcn" path="res://test/carpet.dds" id="2_n5mgg"]
+[ext_resource type="Texture2D" uid="uid://1heov6fgnmxl" path="res://test/white-wall.dds" id="3_s8cvy"]
+[ext_resource type="Texture2D" uid="uid://bn20py0nrasdt" path="res://test/metal.jpg" id="3_xbquj"]
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_wrjmx"]
 points = PackedVector3Array(-50, 0, -50, -50, 0, 50, 50, 0, -50, 50, 0, 50)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4qk24"]
-albedo_color = Color(0.2069262, 0.15447563, 0.4475038, 1)
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_n5mgg"]
+render_priority = 0
+shader = ExtResource("1_7ntvd")
+shader_parameter/sense_sphere_trailing_fade = 15.0
+shader_parameter/sense_sphere_leading_fade = 1.0
+shader_parameter/flat_color = Color(0.1351285, 0.18045264, 0.4224234, 1)
+shader_parameter/albedo_tex = ExtResource("2_n5mgg")
+shader_parameter/uv_scale = Vector2(10, 10)
+shader_parameter/edge_color = Color(0.4, 0.9, 1, 1)
+shader_parameter/edge_radius = 10.0
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_wrjmx"]
-material = SubResource("StandardMaterial3D_4qk24")
+material = SubResource("ShaderMaterial_n5mgg")
 size = Vector2(100, 100)
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_wrjmx"]
 vertices = PackedVector3Array(50, 0, 50, -50, 0, 50, 50, 0, -50, -50, 0, -50)
 polygons = [PackedInt32Array(0, 1, 2), PackedInt32Array(1, 3, 2)]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wrjmx"]
-albedo_color = Color(0.972549, 0.9019608, 0.7764706, 1)
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xbquj"]
+render_priority = 0
+shader = ExtResource("1_7ntvd")
+shader_parameter/sense_sphere_trailing_fade = 10.0
+shader_parameter/sense_sphere_leading_fade = 1.0
+shader_parameter/flat_color = Color(0.75064844, 0.6403292, 0.4777375, 1)
+shader_parameter/albedo_tex = ExtResource("3_s8cvy")
+shader_parameter/uv_scale = Vector2(10, 10)
+shader_parameter/edge_color = Color(0.4, 0.9, 1, 1)
+shader_parameter/edge_radius = 10.0
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_7ntvd"]
-material = SubResource("StandardMaterial3D_wrjmx")
+material = SubResource("ShaderMaterial_xbquj")
 size = Vector2(100, 100)
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_7ntvd"]
@@ -29,28 +49,83 @@ points = PackedVector3Array(-50, 0, -50, -50, 0, 50, 50, 0, -50, 50, 0, 50)
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_s8cvy"]
 points = PackedVector3Array(50, 5, 0.5, 50, 5, -0.5, -50, 5, 0.5, 50, -5, 0.5, 50, -5, -0.5, -50, 5, -0.5, -50, -5, 0.5, -50, -5, -0.5)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n5mgg"]
-albedo_color = Color(0.972549, 0.9019608, 0.7764706, 1)
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ckvac"]
+render_priority = 0
+shader = ExtResource("1_7ntvd")
+shader_parameter/sense_sphere_trailing_fade = 10.0
+shader_parameter/sense_sphere_leading_fade = 1.0
+shader_parameter/flat_color = Color(0.7360299, 0.687395, 0.58122593, 1)
+shader_parameter/albedo_tex = ExtResource("3_s8cvy")
+shader_parameter/uv_scale = Vector2(10, 10)
+shader_parameter/edge_color = Color(0.4, 0.9, 1, 1)
+shader_parameter/edge_radius = 10.0
 
-[sub_resource type="BoxMesh" id="BoxMesh_s8cvy"]
-material = SubResource("StandardMaterial3D_n5mgg")
+[sub_resource type="BoxMesh" id="BoxMesh_ckvac"]
+material = SubResource("ShaderMaterial_ckvac")
 size = Vector3(100, 10, 1)
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_xbquj"]
 points = PackedVector3Array(50, 5, 0.5, 50, 5, -0.5, -50, 5, 0.5, 50, -5, 0.5, 50, -5, -0.5, -50, 5, -0.5, -50, -5, 0.5, -50, -5, -0.5)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xbquj"]
-albedo_color = Color(0.7058824, 0.9019608, 0.7764706, 1)
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_s8cvy"]
+render_priority = 0
+shader = ExtResource("1_7ntvd")
+shader_parameter/sense_sphere_trailing_fade = 10.0
+shader_parameter/sense_sphere_leading_fade = 1.0
+shader_parameter/flat_color = Color(0.7360299, 0.687395, 0.58122593, 1)
+shader_parameter/albedo_tex = ExtResource("3_s8cvy")
+shader_parameter/uv_scale = Vector2(10, 10)
+shader_parameter/edge_color = Color(0.4, 0.9, 1, 1)
+shader_parameter/edge_radius = 10.0
 
 [sub_resource type="BoxMesh" id="BoxMesh_d7c2j"]
-material = SubResource("StandardMaterial3D_xbquj")
+material = SubResource("ShaderMaterial_s8cvy")
 size = Vector3(100, 10, 1)
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_n5mgg"]
 points = PackedVector3Array(50, 5, 0.5, 50, 5, -0.5, -50, 5, 0.5, 50, -5, 0.5, 50, -5, -0.5, -50, 5, -0.5, -50, -5, 0.5, -50, -5, -0.5)
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vpbh8"]
+render_priority = 0
+shader = ExtResource("1_7ntvd")
+shader_parameter/sense_sphere_trailing_fade = 10.0
+shader_parameter/sense_sphere_leading_fade = 1.0
+shader_parameter/flat_color = Color(0.7360299, 0.687395, 0.58122593, 1)
+shader_parameter/albedo_tex = ExtResource("3_s8cvy")
+shader_parameter/uv_scale = Vector2(10, 10)
+shader_parameter/edge_color = Color(0.4, 0.9, 1, 1)
+shader_parameter/edge_radius = 10.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_s8cvy"]
+material = SubResource("ShaderMaterial_vpbh8")
+size = Vector3(100, 10, 1)
+
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_d7c2j"]
 points = PackedVector3Array(50, 5, 0.5, 50, 5, -0.5, -50, 5, 0.5, 50, -5, 0.5, 50, -5, -0.5, -50, 5, -0.5, -50, -5, 0.5, -50, -5, -0.5)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_wrjmx"]
+data = PackedVector3Array(-0.125, 0.125, 0.125, 0.125, 0.125, 0.125, -0.125, -0.125, 0.125, 0.125, 0.125, 0.125, 0.125, -0.125, 0.125, -0.125, -0.125, 0.125, 0.125, 0.125, -0.125, -0.125, 0.125, -0.125, 0.125, -0.125, -0.125, -0.125, 0.125, -0.125, -0.125, -0.125, -0.125, 0.125, -0.125, -0.125, 0.125, 0.125, 0.125, 0.125, 0.125, -0.125, 0.125, -0.125, 0.125, 0.125, 0.125, -0.125, 0.125, -0.125, -0.125, 0.125, -0.125, 0.125, -0.125, 0.125, -0.125, -0.125, 0.125, 0.125, -0.125, -0.125, -0.125, -0.125, 0.125, 0.125, -0.125, -0.125, 0.125, -0.125, -0.125, -0.125, 0.125, 0.125, 0.125, -0.125, 0.125, 0.125, 0.125, 0.125, -0.125, -0.125, 0.125, 0.125, -0.125, 0.125, -0.125, 0.125, 0.125, -0.125, -0.125, -0.125, 0.125, 0.125, -0.125, 0.125, -0.125, -0.125, -0.125, 0.125, -0.125, 0.125, 0.125, -0.125, -0.125, -0.125, -0.125, -0.125)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7ntvd"]
+albedo_color = Color(1, 0.8117647, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_xbquj"]
+size = Vector3(0.25, 0.25, 0.25)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_d7c2j"]
+render_priority = 0
+shader = ExtResource("1_7ntvd")
+shader_parameter/sense_sphere_trailing_fade = 10.0
+shader_parameter/sense_sphere_leading_fade = 1.0
+shader_parameter/flat_color = Color(0.23365113, 0.217558, 0.26587844, 1)
+shader_parameter/albedo_tex = ExtResource("3_xbquj")
+shader_parameter/uv_scale = Vector2(10, 10)
+shader_parameter/edge_color = Color(0.4, 0.9, 1, 1)
+shader_parameter/edge_radius = 10.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_n5mgg"]
+material = SubResource("ShaderMaterial_d7c2j")
+size = Vector3(2, 4, 2)
 
 [node name="Level" type="Node3D" unique_id=403356144]
 
@@ -62,6 +137,7 @@ points = PackedVector3Array(50, 5, 0.5, 50, 5, -0.5, -50, 5, 0.5, 50, -5, 0.5, 5
 shape = SubResource("ConvexPolygonShape3D_wrjmx")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Geo/Floor" unique_id=877547179]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.21038318, 0, 0.16504383)
 mesh = SubResource("PlaneMesh_wrjmx")
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="Geo/Floor" unique_id=1652153594]
@@ -87,7 +163,7 @@ transform = Transform3D(4.371139e-08, -3.821371e-15, -1, -8.742278e-08, -1, 0, -
 shape = SubResource("ConvexPolygonShape3D_s8cvy")
 
 [node name="MeshInstance3D5" type="MeshInstance3D" parent="Geo/Wall1" unique_id=1327546445]
-mesh = SubResource("BoxMesh_s8cvy")
+mesh = SubResource("BoxMesh_ckvac")
 
 [node name="Wall2" type="StaticBody3D" parent="Geo" unique_id=971547717]
 transform = Transform3D(-1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 0, 0, 1, 0, 5, 50)
@@ -116,5 +192,30 @@ shape = SubResource("ConvexPolygonShape3D_d7c2j")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Geo/Wall4" unique_id=1451351771]
 mesh = SubResource("BoxMesh_s8cvy")
 
+[node name="Interactable" type="StaticBody3D" parent="." unique_id=2033938169 groups=["Interactable"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0.5, -2)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Interactable" unique_id=1781490064]
+shape = SubResource("ConcavePolygonShape3D_wrjmx")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Interactable" unique_id=626046289]
+material_override = SubResource("StandardMaterial3D_7ntvd")
+mesh = SubResource("BoxMesh_xbquj")
+
 [node name="Player" parent="." unique_id=938892595 instance=ExtResource("1_wrjmx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.067, 0.7541386, -16.732)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=660550947]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 2, 3)
+mesh = SubResource("BoxMesh_n5mgg")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="." unique_id=1933203604]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.93495, 2.0000002, 17.105488)
+mesh = SubResource("BoxMesh_n5mgg")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=149162563]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.363933, 2, 2.8787107)
+mesh = SubResource("BoxMesh_n5mgg")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=1221566406]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 9, 6.1544676)
