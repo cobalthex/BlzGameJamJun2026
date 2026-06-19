@@ -14,7 +14,10 @@ uniform sampler2D albedo_tex : source_color;
 uniform vec2 uv_scale = vec2(1.0, 1.0);
 
 uniform vec3 edge_color : source_color = vec3(0.4, 0.9, 1.0);
-uniform float edge_radius = 10.0;
+// uniform float edge_radius = 10.0;
+
+uniform float band_spacing = 1.0;
+uniform float band_strength = 0.75;
 
 float calc_sense_mask(float dist)
 {
@@ -57,14 +60,18 @@ void fragment()
 
     // todo: only draw on edges?
     // todo: edge radius should hide under trailing radius near finish
-    float edge_overlay = sense_mask * smoothstep(
-        sense_sphere_leading_radius - edge_radius,
-        sense_sphere_leading_radius,
-        dist_to_sense_sphere);
+    // float edge_overlay = sense_mask * smoothstep(
+    //     sense_sphere_leading_radius - edge_radius,
+    //     sense_sphere_leading_radius,
+    //     dist_to_sense_sphere);
+    // EMISSION = mix(flat_color, edge_color, edge_overlay) * (1.0 - sense_mask);
+
+    float stripes = 1.0 - band_strength * abs(fract(dist_to_sense_sphere / band_spacing) - 0.5) * 2.0;
 
     vec4 tex = texture(albedo_tex, UV);
-    EMISSION = mix(flat_color, edge_color, edge_overlay) * (1.0 - sense_mask);
-    ALBEDO = mix(flat_color, tex.rgb, sense_mask);
+    ALBEDO = mix(flat_color.rgb, tex.rgb, sense_mask * stripes);
+
+    EMISSION = flat_color * (1.0 - sense_mask);
 }
 
 void light()
@@ -80,7 +87,7 @@ void light()
         sense_sphere_leading_radius,
         dist_to_sense_sphere);
     float sense_mask = tail * head;
-        
+
     vec3 diffuse =
         ALBEDO *
         LIGHT_COLOR.rgb *

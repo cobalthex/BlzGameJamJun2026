@@ -1,4 +1,5 @@
 using Godot;
+using System.Text;
 
 public partial class Player : CharacterBody3D
 {
@@ -13,7 +14,7 @@ public partial class Player : CharacterBody3D
     [Export]
     public float PulseHeadSpeed { get; set; } = 20.0f; // per sec
     [Export]
-    public float PulseTailSpeed { get; set; } = 40.0f;
+    public float PulseTailSpeed { get; set; } = 35.0f;
     [Export]
     public float PulseTailOffset { get; set; } = -60.0f;
     
@@ -23,6 +24,7 @@ public partial class Player : CharacterBody3D
     private Label m_debugHUD;
 
     private Pulse m_pulse;
+    ulong m_pulseTime = 0;
 
     // todo: elsewhere
     public bool CaptureMouse
@@ -51,7 +53,9 @@ public partial class Player : CharacterBody3D
         if (m_pulse != null)
         {
 #if DEBUG
-            m_debugHUD.Text = $"Pulse:\n  Center   = {m_pulse.Origin}\n  Trailing = {m_pulse.TrailingRadius:N2}\n  Leading  = {m_pulse.LeadingRadius:N2}";
+            ulong time = Time.GetTicksUsec() - m_pulseTime;
+            float convergeTime = (-PulseTailOffset) / (PulseTailSpeed - PulseHeadSpeed);
+            m_debugHUD.Text = $"Pulse:\n  Center   = {m_pulse.Origin}\n  Trailing = {m_pulse.TrailingRadius:N2}\n  Leading  = {m_pulse.LeadingRadius:N2}\n  Converge = {(time * 1e-6):N2} / {convergeTime:N2} s";
 #endif
             if (m_pulse.Update(delta) == CompletionStatus.Completed)
             {
@@ -119,6 +123,11 @@ public partial class Player : CharacterBody3D
 
         else if (@event is InputEventKey keyEvent)
         {
+            if (keyEvent.IsActionPressed("game_quit"))
+            {
+                GetTree().Quit();
+            }
+
             if (keyEvent.IsActionPressed("capture_mouse"))
             {
                 CaptureMouse = !CaptureMouse;
@@ -128,6 +137,7 @@ public partial class Player : CharacterBody3D
                 (m_pulse == null || NoPulseDelay))
             {
                 m_pulse = new Pulse(GlobalTransform.Origin, PulseTailSpeed, PulseHeadSpeed, PulseTailOffset);
+                m_pulseTime = Time.GetTicksUsec();
             }
         }
     }

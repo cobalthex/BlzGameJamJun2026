@@ -14,11 +14,12 @@ render_priority = 0
 shader = ExtResource("1_7ntvd")
 shader_parameter/sense_sphere_trailing_fade = 15.0
 shader_parameter/sense_sphere_leading_fade = 1.0
-shader_parameter/flat_color = Color(0.1351285, 0.18045264, 0.4224234, 1)
+shader_parameter/flat_color = Color(0.7360299, 0.687395, 0.58122593, 1)
 shader_parameter/albedo_tex = ExtResource("2_n5mgg")
 shader_parameter/uv_scale = Vector2(10, 10)
 shader_parameter/edge_color = Color(0.4, 0.9, 1, 1)
-shader_parameter/edge_radius = 10.0
+shader_parameter/band_spacing = 0.5
+shader_parameter/band_strength = 1.0
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_wrjmx"]
 material = SubResource("ShaderMaterial_n5mgg")
@@ -33,11 +34,12 @@ render_priority = 0
 shader = ExtResource("1_7ntvd")
 shader_parameter/sense_sphere_trailing_fade = 10.0
 shader_parameter/sense_sphere_leading_fade = 1.0
-shader_parameter/flat_color = Color(0.75064844, 0.6403292, 0.4777375, 1)
+shader_parameter/flat_color = Color(0.7360299, 0.687395, 0.58122593, 1)
 shader_parameter/albedo_tex = ExtResource("3_s8cvy")
 shader_parameter/uv_scale = Vector2(10, 10)
 shader_parameter/edge_color = Color(0.4, 0.9, 1, 1)
-shader_parameter/edge_radius = 10.0
+shader_parameter/band_spacing = 0.5
+shader_parameter/band_strength = 1.0
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_7ntvd"]
 material = SubResource("ShaderMaterial_xbquj")
@@ -58,7 +60,8 @@ shader_parameter/flat_color = Color(0.7360299, 0.687395, 0.58122593, 1)
 shader_parameter/albedo_tex = ExtResource("3_s8cvy")
 shader_parameter/uv_scale = Vector2(100, 10)
 shader_parameter/edge_color = Color(0.4, 0.9, 1, 1)
-shader_parameter/edge_radius = 10.0
+shader_parameter/band_spacing = 0.5
+shader_parameter/band_strength = 1.0
 
 [sub_resource type="BoxMesh" id="BoxMesh_ckvac"]
 material = SubResource("ShaderMaterial_ckvac")
@@ -76,7 +79,8 @@ shader_parameter/flat_color = Color(0.7360299, 0.687395, 0.58122593, 1)
 shader_parameter/albedo_tex = ExtResource("3_s8cvy")
 shader_parameter/uv_scale = Vector2(100, 10)
 shader_parameter/edge_color = Color(0.4, 0.9, 1, 1)
-shader_parameter/edge_radius = 10.0
+shader_parameter/band_spacing = 0.5
+shader_parameter/band_strength = 1.0
 
 [sub_resource type="BoxMesh" id="BoxMesh_d7c2j"]
 material = SubResource("ShaderMaterial_s8cvy")
@@ -94,7 +98,8 @@ shader_parameter/flat_color = Color(0.7360299, 0.687395, 0.58122593, 1)
 shader_parameter/albedo_tex = ExtResource("3_s8cvy")
 shader_parameter/uv_scale = Vector2(100, 10)
 shader_parameter/edge_color = Color(0.4, 0.9, 1, 1)
-shader_parameter/edge_radius = 10.0
+shader_parameter/band_spacing = 0.5
+shader_parameter/band_strength = 1.0
 
 [sub_resource type="BoxMesh" id="BoxMesh_s8cvy"]
 material = SubResource("ShaderMaterial_vpbh8")
@@ -121,7 +126,8 @@ shader_parameter/flat_color = Color(0.23365113, 0.217558, 0.26587844, 1)
 shader_parameter/albedo_tex = ExtResource("3_xbquj")
 shader_parameter/uv_scale = Vector2(10, 10)
 shader_parameter/edge_color = Color(0.4, 0.9, 1, 1)
-shader_parameter/edge_radius = 10.0
+shader_parameter/band_spacing = 0.5
+shader_parameter/band_strength = 1.0
 
 [sub_resource type="BoxMesh" id="BoxMesh_n5mgg"]
 material = SubResource("ShaderMaterial_d7c2j")
