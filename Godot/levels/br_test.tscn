@@ -2,11 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dy4f7ye8c4hfb" path="res://assets/prototyping/kenney_prototype-textures/PNG/Dark/texture_09.png" id="1_ma76e"]
 [ext_resource type="Texture2D" uid="uid://biwhhi6kd2v1x" path="res://assets/prototyping/kenney_prototype-textures/PNG/Orange/texture_02.png" id="2_ma76e"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6cukt"]
-albedo_texture = ExtResource("1_ma76e")
-uv1_triplanar = true
-uv1_world_triplanar = true
+[ext_resource type="Texture2D" uid="uid://catsoe35p31ys" path="res://assets/prototyping/kenney_prototype-textures/PNG/Green/texture_01.png" id="3_3rgvj"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3rgvj"]
 albedo_texture = ExtResource("2_ma76e")
@@ -18,15 +14,19 @@ albedo_texture = ExtResource("2_ma76e")
 uv1_triplanar = true
 uv1_world_triplanar = true
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6cukt"]
+albedo_texture = ExtResource("1_ma76e")
+uv1_triplanar = true
+uv1_world_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nylhv"]
+albedo_texture = ExtResource("3_3rgvj")
+uv1_triplanar = true
+uv1_world_triplanar = true
+
 [node name="BrTest" type="Node3D" unique_id=147827947]
 
 [node name="Level Geo" type="Node" parent="." unique_id=1187643138]
-
-[node name="Room" type="CSGBox3D" parent="Level Geo" unique_id=251159192]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
-flip_faces = true
-size = Vector3(20, 3, 20)
-material = SubResource("StandardMaterial3D_6cukt")
 
 [node name="Thick Pillar" type="CSGBox3D" parent="Level Geo" unique_id=299026041]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1.5, -2)
@@ -164,3 +164,17 @@ material = SubResource("StandardMaterial3D_hjfax")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
 size = Vector3(2.1, 0.2, 1.1)
 material = SubResource("StandardMaterial3D_hjfax")
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="Level Geo" unique_id=1547864505]
+
+[node name="Room" type="CSGBox3D" parent="Level Geo/CSGCombiner3D" unique_id=251159192]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+flip_faces = true
+size = Vector3(20, 3, 20)
+material = SubResource("StandardMaterial3D_6cukt")
+
+[node name="Pit" type="CSGBox3D" parent="Level Geo/CSGCombiner3D" unique_id=1736441325]
+transform = Transform3D(1, 0, 0, 0, 1.0000001, 0, 0, 0, 1.0000001, 8.25, -0.5, -7)
+flip_faces = true
+size = Vector3(3.5, 1, 6)
+material = SubResource("StandardMaterial3D_nylhv")
