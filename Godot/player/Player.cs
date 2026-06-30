@@ -3,7 +3,7 @@ using System.Text;
 
 public partial class Player : CharacterBody3D
 {
-	public const float Speed = 15.0f;
+	public const float Speed = 4.0f;
 	public const float AirDrag = 0.2f;
 	public const float GroundFriction = 20.0f;
 	public const float JumpVelocity = 4.5f;
