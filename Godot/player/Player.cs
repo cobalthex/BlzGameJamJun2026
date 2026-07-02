@@ -8,16 +8,16 @@ public partial class Player : CharacterBody3D
 	public const float GroundFriction = 20.0f;
 	public const float JumpVelocity = 4.5f;
 	public const float MouseScale = 0.005f;
-	
-	public bool NoPulseDelay { get; set; } = true;
+
+	public bool NoPulseDelay { get; set; } = false;
 
 	[Export]
-	public float PulseHeadSpeed { get; set; } = 20.0f; // per sec
+	public float PulseHeadSpeed { get; set; } = 10.0f; // per sec
 	[Export]
 	public float PulseTailSpeed { get; set; } = 35.0f;
 	[Export]
-	public float PulseTailOffset { get; set; } = -60.0f;
-	
+	public float PulseTailOffset { get; set; } = -80.0f;
+
 	// perhaps instead of clamping radius, have faster tail vs head speed and cancel when tail overtakes?
 
 	private Camera3D m_fpcam;
@@ -37,14 +37,14 @@ public partial class Player : CharacterBody3D
 		}
 	}
 	private bool m_captureMouse;
-	
+
 	public override void _Ready()
 	{
 		m_fpcam = GetNode<Camera3D>("FPCamera");
 		m_debugHUD = GetNode<Label>("DebugHUD");
 		m_debugHUD.Text = "";
 		m_pulse = null;
-		
+
 		CaptureMouse = true;
 	}
 
@@ -139,8 +139,17 @@ public partial class Player : CharacterBody3D
 				m_pulse = new Pulse(GlobalTransform.Origin, PulseTailSpeed, PulseHeadSpeed, PulseTailOffset);
 				m_pulseTime = Time.GetTicksUsec();
 			}
-		}
-	}
+
+
+
+#if DEBUG
+			if (keyEvent.IsActionPressed("debug_toggle_pulse_delay"))
+			{
+				NoPulseDelay ^= true;
+			}
+#endif
+        }
+    }
 
 }
 
@@ -179,7 +188,7 @@ class Pulse
 	{
 		TrailingRadius += (float)(m_tailSpeed * delta);
 		LeadingRadius += (float)(m_headSpeed * delta);
-		
+
 		if (TrailingRadius >= LeadingRadius)
 		{
 			RenderingServer.GlobalShaderParameterSet("sense_sphere_trailing_radius", 0);

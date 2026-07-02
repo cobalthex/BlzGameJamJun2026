@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://0ejjvoht1xdb"]
 
+[ext_resource type="Script" uid="uid://b1v8hm16db74y" path="res://TheObject.cs" id="1_868yc"]
 [ext_resource type="Shader" uid="uid://ou5y6x1nbf17" path="res://player/Sensed.gdshader" id="1_b8ka7"]
 [ext_resource type="Texture2D" uid="uid://biwhhi6kd2v1x" path="res://assets/prototyping/kenney_prototype-textures/PNG/Orange/texture_02.png" id="2_g1svp"]
 [ext_resource type="Texture2D" uid="uid://p0o4nkh8kerh" path="res://assets/prototyping/kenney_prototype-textures/PNG/Purple/texture_02.png" id="4_vhhjt"]
@@ -22,6 +23,7 @@ shader_parameter/sense_sphere_trailing_fade = 15.0
 shader_parameter/sense_sphere_leading_fade = 2.0
 shader_parameter/color = Color(0.30692276, 0.30692267, 0.3069227, 1)
 shader_parameter/illumination_color = Color(0, 0.6, 1, 1)
+shader_parameter/illumination_strength = 0.5
 shader_parameter/band_spacing = 3.0
 shader_parameter/band_strength = 0.75
 
@@ -32,6 +34,7 @@ shader_parameter/sense_sphere_trailing_fade = 15.0
 shader_parameter/sense_sphere_leading_fade = 2.0
 shader_parameter/color = Color(0.30692276, 0.30692267, 0.3069227, 1)
 shader_parameter/illumination_color = Color(0, 0.6, 1, 1)
+shader_parameter/illumination_strength = 0.5
 shader_parameter/band_spacing = 3.0
 shader_parameter/band_strength = 0.75
 
@@ -42,6 +45,7 @@ shader_parameter/sense_sphere_trailing_fade = 15.0
 shader_parameter/sense_sphere_leading_fade = 2.0
 shader_parameter/color = Color(0.4390491, 0.43904912, 0.43904912, 1)
 shader_parameter/illumination_color = Color(0, 0.6, 1, 1)
+shader_parameter/illumination_strength = 0.5
 shader_parameter/band_spacing = 3.0
 shader_parameter/band_strength = 0.75
 
@@ -50,8 +54,9 @@ render_priority = 0
 shader = ExtResource("1_b8ka7")
 shader_parameter/sense_sphere_trailing_fade = 15.0
 shader_parameter/sense_sphere_leading_fade = 2.0
-shader_parameter/color = Color(0.2763515, 0.38639548, 0.19139913, 1)
+shader_parameter/color = Color(0.30692276, 0.30692267, 0.3069227, 1)
 shader_parameter/illumination_color = Color(0, 0.6, 1, 1)
+shader_parameter/illumination_strength = 0.5
 shader_parameter/band_spacing = 3.0
 shader_parameter/band_strength = 0.75
 
@@ -62,6 +67,7 @@ shader_parameter/sense_sphere_trailing_fade = 15.0
 shader_parameter/sense_sphere_leading_fade = 2.0
 shader_parameter/color = Color(0.30692276, 0.30692267, 0.3069227, 1)
 shader_parameter/illumination_color = Color(0, 0.6, 1, 1)
+shader_parameter/illumination_strength = 0.5
 shader_parameter/band_spacing = 3.0
 shader_parameter/band_strength = 0.75
 
@@ -72,6 +78,7 @@ shader_parameter/sense_sphere_trailing_fade = 15.0
 shader_parameter/sense_sphere_leading_fade = 2.0
 shader_parameter/color = Color(0.2763515, 0.38639548, 0.19139913, 1)
 shader_parameter/illumination_color = Color(0, 0.6, 1, 1)
+shader_parameter/illumination_strength = 0.5
 shader_parameter/band_spacing = 3.0
 shader_parameter/band_strength = 0.75
 
@@ -82,6 +89,7 @@ shader_parameter/sense_sphere_trailing_fade = 15.0
 shader_parameter/sense_sphere_leading_fade = 2.0
 shader_parameter/color = Color(0.2763515, 0.38639548, 0.19139913, 1)
 shader_parameter/illumination_color = Color(0, 0.6, 1, 1)
+shader_parameter/illumination_strength = 0.5
 shader_parameter/band_spacing = 3.0
 shader_parameter/band_strength = 0.75
 
@@ -92,6 +100,7 @@ shader_parameter/sense_sphere_trailing_fade = 15.0
 shader_parameter/sense_sphere_leading_fade = 2.0
 shader_parameter/color = Color(1, 0.46666667, 0, 1)
 shader_parameter/illumination_color = Color(0, 0.6, 1, 1)
+shader_parameter/illumination_strength = 0.5
 shader_parameter/band_spacing = 3.0
 shader_parameter/band_strength = 0.75
 
@@ -102,6 +111,7 @@ shader_parameter/sense_sphere_trailing_fade = 15.0
 shader_parameter/sense_sphere_leading_fade = 2.0
 shader_parameter/color = Color(0.9195461, 0.20243543, 0.18361902, 1)
 shader_parameter/illumination_color = Color(0, 0.6, 1, 1)
+shader_parameter/illumination_strength = 0.5
 shader_parameter/band_spacing = 3.0
 shader_parameter/band_strength = 0.75
 
@@ -120,6 +130,7 @@ shader_parameter/sense_sphere_trailing_fade = 15.0
 shader_parameter/sense_sphere_leading_fade = 2.0
 shader_parameter/color = Color(1, 0.4666667, 0, 1)
 shader_parameter/illumination_color = Color(0, 0.6, 1, 1)
+shader_parameter/illumination_strength = 0.5
 shader_parameter/band_spacing = 3.0
 shader_parameter/band_strength = 0.75
 
@@ -130,6 +141,7 @@ shader_parameter/sense_sphere_trailing_fade = 15.0
 shader_parameter/sense_sphere_leading_fade = 2.0
 shader_parameter/color = Color(0.30692276, 0.30692267, 0.3069227, 1)
 shader_parameter/illumination_color = Color(0, 0.6, 1, 1)
+shader_parameter/illumination_strength = 0.5
 shader_parameter/band_spacing = 3.0
 shader_parameter/band_strength = 0.75
 
@@ -140,6 +152,7 @@ shader_parameter/sense_sphere_trailing_fade = 15.0
 shader_parameter/sense_sphere_leading_fade = 2.0
 shader_parameter/color = Color(0.30692276, 0.30692267, 0.3069227, 1)
 shader_parameter/illumination_color = Color(0, 0.6, 1, 1)
+shader_parameter/illumination_strength = 0.5
 shader_parameter/band_spacing = 3.0
 shader_parameter/band_strength = 0.75
 
@@ -150,6 +163,7 @@ shader_parameter/sense_sphere_trailing_fade = 15.0
 shader_parameter/sense_sphere_leading_fade = 2.0
 shader_parameter/color = Color(0.30692276, 0.30692267, 0.3069227, 1)
 shader_parameter/illumination_color = Color(0, 0.6, 1, 1)
+shader_parameter/illumination_strength = 0.5
 shader_parameter/band_spacing = 3.0
 shader_parameter/band_strength = 0.75
 
@@ -160,6 +174,7 @@ shader_parameter/sense_sphere_trailing_fade = 15.0
 shader_parameter/sense_sphere_leading_fade = 2.0
 shader_parameter/color = Color(1, 0.46666667, 0, 1)
 shader_parameter/illumination_color = Color(0, 0.6, 1, 1)
+shader_parameter/illumination_strength = 0.5
 shader_parameter/band_spacing = 3.0
 shader_parameter/band_strength = 0.75
 
@@ -170,6 +185,7 @@ shader_parameter/sense_sphere_trailing_fade = 15.0
 shader_parameter/sense_sphere_leading_fade = 2.0
 shader_parameter/color = Color(0.30692276, 0.30692267, 0.3069227, 1)
 shader_parameter/illumination_color = Color(0, 0.6, 1, 1)
+shader_parameter/illumination_strength = 0.5
 shader_parameter/band_spacing = 3.0
 shader_parameter/band_strength = 0.75
 
@@ -180,6 +196,7 @@ shader_parameter/sense_sphere_trailing_fade = 15.0
 shader_parameter/sense_sphere_leading_fade = 2.0
 shader_parameter/color = Color(0.2763515, 0.38639548, 0.19139913, 1)
 shader_parameter/illumination_color = Color(0, 0.6, 1, 1)
+shader_parameter/illumination_strength = 0.5
 shader_parameter/band_spacing = 3.0
 shader_parameter/band_strength = 0.75
 
@@ -190,6 +207,7 @@ shader_parameter/sense_sphere_trailing_fade = 15.0
 shader_parameter/sense_sphere_leading_fade = 2.0
 shader_parameter/color = Color(0.30692276, 0.30692267, 0.3069227, 1)
 shader_parameter/illumination_color = Color(0, 0.6, 1, 1)
+shader_parameter/illumination_strength = 0.5
 shader_parameter/band_spacing = 3.0
 shader_parameter/band_strength = 0.75
 
@@ -198,8 +216,9 @@ render_priority = 0
 shader = ExtResource("1_b8ka7")
 shader_parameter/sense_sphere_trailing_fade = 15.0
 shader_parameter/sense_sphere_leading_fade = 2.0
-shader_parameter/color = Color(0.30692276, 0.30692267, 0.3069227, 1)
+shader_parameter/color = Color(0.1074421, 0.31392962, 0.51418173, 1)
 shader_parameter/illumination_color = Color(0, 0.6, 1, 1)
+shader_parameter/illumination_strength = 0.5
 shader_parameter/band_spacing = 3.0
 shader_parameter/band_strength = 0.75
 
@@ -210,6 +229,7 @@ shader_parameter/sense_sphere_trailing_fade = 15.0
 shader_parameter/sense_sphere_leading_fade = 2.0
 shader_parameter/color = Color(0.30692276, 0.30692267, 0.3069227, 1)
 shader_parameter/illumination_color = Color(0, 0.6, 1, 1)
+shader_parameter/illumination_strength = 0.5
 shader_parameter/band_spacing = 3.0
 shader_parameter/band_strength = 0.75
 
@@ -220,6 +240,7 @@ shader_parameter/sense_sphere_trailing_fade = 15.0
 shader_parameter/sense_sphere_leading_fade = 2.0
 shader_parameter/color = Color(0.30692276, 0.30692267, 0.3069227, 1)
 shader_parameter/illumination_color = Color(0, 0.6, 1, 1)
+shader_parameter/illumination_strength = 0.5
 shader_parameter/band_spacing = 3.0
 shader_parameter/band_strength = 0.75
 
@@ -230,6 +251,7 @@ shader_parameter/sense_sphere_trailing_fade = 15.0
 shader_parameter/sense_sphere_leading_fade = 2.0
 shader_parameter/color = Color(0.30692276, 0.30692267, 0.3069227, 1)
 shader_parameter/illumination_color = Color(0, 0.6, 1, 1)
+shader_parameter/illumination_strength = 0.5
 shader_parameter/band_spacing = 3.0
 shader_parameter/band_strength = 0.75
 
@@ -240,6 +262,7 @@ shader_parameter/sense_sphere_trailing_fade = 15.0
 shader_parameter/sense_sphere_leading_fade = 2.0
 shader_parameter/color = Color(0.30692276, 0.30692267, 0.3069227, 1)
 shader_parameter/illumination_color = Color(0, 0.6, 1, 1)
+shader_parameter/illumination_strength = 0.5
 shader_parameter/band_spacing = 3.0
 shader_parameter/band_strength = 0.75
 
@@ -250,6 +273,7 @@ shader_parameter/sense_sphere_trailing_fade = 15.0
 shader_parameter/sense_sphere_leading_fade = 2.0
 shader_parameter/color = Color(1, 0.46666667, 0, 1)
 shader_parameter/illumination_color = Color(0, 0.6, 1, 1)
+shader_parameter/illumination_strength = 0.5
 shader_parameter/band_spacing = 3.0
 shader_parameter/band_strength = 0.75
 
@@ -260,6 +284,7 @@ shader_parameter/sense_sphere_trailing_fade = 15.0
 shader_parameter/sense_sphere_leading_fade = 2.0
 shader_parameter/color = Color(1, 0.46666667, 0, 1)
 shader_parameter/illumination_color = Color(0, 0.6, 1, 1)
+shader_parameter/illumination_strength = 0.5
 shader_parameter/band_spacing = 3.0
 shader_parameter/band_strength = 0.75
 
@@ -270,6 +295,7 @@ shader_parameter/sense_sphere_trailing_fade = 15.0
 shader_parameter/sense_sphere_leading_fade = 2.0
 shader_parameter/color = Color(0.21960784, 0.21960784, 0.21960784, 1)
 shader_parameter/illumination_color = Color(0, 0.6, 1, 1)
+shader_parameter/illumination_strength = 0.5
 shader_parameter/band_spacing = 3.0
 shader_parameter/band_strength = 0.75
 
@@ -278,8 +304,9 @@ render_priority = 0
 shader = ExtResource("1_b8ka7")
 shader_parameter/sense_sphere_trailing_fade = 15.0
 shader_parameter/sense_sphere_leading_fade = 2.0
-shader_parameter/color = Color(0.30692276, 0.30692267, 0.3069227, 1)
+shader_parameter/color = Color(0.7792914, 0.7792914, 0.7792913, 1)
 shader_parameter/illumination_color = Color(0, 0.6, 1, 1)
+shader_parameter/illumination_strength = 0.5
 shader_parameter/band_spacing = 3.0
 shader_parameter/band_strength = 0.75
 
@@ -290,6 +317,7 @@ shader_parameter/sense_sphere_trailing_fade = 15.0
 shader_parameter/sense_sphere_leading_fade = 2.0
 shader_parameter/color = Color(0.30692276, 0.30692267, 0.3069227, 1)
 shader_parameter/illumination_color = Color(0, 0.6, 1, 1)
+shader_parameter/illumination_strength = 0.5
 shader_parameter/band_spacing = 3.0
 shader_parameter/band_strength = 0.75
 
@@ -300,6 +328,7 @@ shader_parameter/sense_sphere_trailing_fade = 15.0
 shader_parameter/sense_sphere_leading_fade = 2.0
 shader_parameter/color = Color(0.30692276, 0.30692267, 0.3069227, 1)
 shader_parameter/illumination_color = Color(0, 0.6, 1, 1)
+shader_parameter/illumination_strength = 0.5
 shader_parameter/band_spacing = 3.0
 shader_parameter/band_strength = 0.75
 
@@ -308,8 +337,9 @@ render_priority = 0
 shader = ExtResource("1_b8ka7")
 shader_parameter/sense_sphere_trailing_fade = 15.0
 shader_parameter/sense_sphere_leading_fade = 2.0
-shader_parameter/color = Color(0.2763515, 0.38639548, 0.19139913, 1)
+shader_parameter/color = Color(0.7792914, 0.7792914, 0.7792913, 1)
 shader_parameter/illumination_color = Color(0, 0.6, 1, 1)
+shader_parameter/illumination_strength = 0.5
 shader_parameter/band_spacing = 3.0
 shader_parameter/band_strength = 0.75
 
@@ -318,8 +348,9 @@ render_priority = 0
 shader = ExtResource("1_b8ka7")
 shader_parameter/sense_sphere_trailing_fade = 15.0
 shader_parameter/sense_sphere_leading_fade = 2.0
-shader_parameter/color = Color(0.30692276, 0.30692267, 0.3069227, 1)
+shader_parameter/color = Color(0.7792914, 0.7792914, 0.7792913, 1)
 shader_parameter/illumination_color = Color(0, 0.6, 1, 1)
+shader_parameter/illumination_strength = 0.5
 shader_parameter/band_spacing = 3.0
 shader_parameter/band_strength = 0.75
 
@@ -330,6 +361,7 @@ shader_parameter/sense_sphere_trailing_fade = 15.0
 shader_parameter/sense_sphere_leading_fade = 2.0
 shader_parameter/color = Color(0.21960784, 0.21960784, 0.21960784, 1)
 shader_parameter/illumination_color = Color(0, 0.6, 1, 1)
+shader_parameter/illumination_strength = 0.5
 shader_parameter/band_spacing = 3.0
 shader_parameter/band_strength = 0.75
 
@@ -340,6 +372,7 @@ shader_parameter/sense_sphere_trailing_fade = 15.0
 shader_parameter/sense_sphere_leading_fade = 2.0
 shader_parameter/color = Color(0.30692276, 0.30692267, 0.3069227, 1)
 shader_parameter/illumination_color = Color(0, 0.6, 1, 1)
+shader_parameter/illumination_strength = 0.5
 shader_parameter/band_spacing = 3.0
 shader_parameter/band_strength = 0.75
 
@@ -348,8 +381,20 @@ render_priority = 0
 shader = ExtResource("1_b8ka7")
 shader_parameter/sense_sphere_trailing_fade = 15.0
 shader_parameter/sense_sphere_leading_fade = 2.0
-shader_parameter/color = Color(0.2763515, 0.38639548, 0.19139913, 1)
+shader_parameter/color = Color(0.7792914, 0.7792914, 0.7792913, 1)
 shader_parameter/illumination_color = Color(0, 0.6, 1, 1)
+shader_parameter/illumination_strength = 0.5
+shader_parameter/band_spacing = 3.0
+shader_parameter/band_strength = 0.75
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8xx4g"]
+render_priority = 0
+shader = ExtResource("1_b8ka7")
+shader_parameter/sense_sphere_trailing_fade = 15.0
+shader_parameter/sense_sphere_leading_fade = 2.0
+shader_parameter/color = Color(0.26293245, 0.26293245, 0.26293245, 1)
+shader_parameter/illumination_color = Color(0, 0.6, 1, 1)
+shader_parameter/illumination_strength = 0.5
 shader_parameter/band_spacing = 3.0
 shader_parameter/band_strength = 0.75
 
@@ -360,6 +405,18 @@ shader_parameter/sense_sphere_trailing_fade = 15.0
 shader_parameter/sense_sphere_leading_fade = 2.0
 shader_parameter/color = Color(0.30692276, 0.30692267, 0.3069227, 1)
 shader_parameter/illumination_color = Color(0, 0.6, 1, 1)
+shader_parameter/illumination_strength = 0.5
+shader_parameter/band_spacing = 3.0
+shader_parameter/band_strength = 0.75
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_he712"]
+render_priority = 0
+shader = ExtResource("1_b8ka7")
+shader_parameter/sense_sphere_trailing_fade = 15.0
+shader_parameter/sense_sphere_leading_fade = 2.0
+shader_parameter/color = Color(0.21960784, 0.21960784, 0.21960784, 1)
+shader_parameter/illumination_color = Color(0, 0.6, 1, 1)
+shader_parameter/illumination_strength = 0.5
 shader_parameter/band_spacing = 3.0
 shader_parameter/band_strength = 0.75
 
@@ -370,6 +427,7 @@ shader_parameter/sense_sphere_trailing_fade = 15.0
 shader_parameter/sense_sphere_leading_fade = 2.0
 shader_parameter/color = Color(0.30692276, 0.30692267, 0.3069227, 1)
 shader_parameter/illumination_color = Color(0, 0.6, 1, 1)
+shader_parameter/illumination_strength = 0.5
 shader_parameter/band_spacing = 3.0
 shader_parameter/band_strength = 0.75
 
@@ -378,8 +436,9 @@ render_priority = 0
 shader = ExtResource("1_b8ka7")
 shader_parameter/sense_sphere_trailing_fade = 15.0
 shader_parameter/sense_sphere_leading_fade = 2.0
-shader_parameter/color = Color(0.30692276, 0.30692267, 0.3069227, 1)
+shader_parameter/color = Color(0.7792914, 0.7792914, 0.7792913, 1)
 shader_parameter/illumination_color = Color(0, 0.6, 1, 1)
+shader_parameter/illumination_strength = 0.5
 shader_parameter/band_spacing = 3.0
 shader_parameter/band_strength = 0.75
 
@@ -390,6 +449,7 @@ shader_parameter/sense_sphere_trailing_fade = 15.0
 shader_parameter/sense_sphere_leading_fade = 2.0
 shader_parameter/color = Color(0.9195461, 0.20243543, 0.18361902, 1)
 shader_parameter/illumination_color = Color(0, 0.6, 1, 1)
+shader_parameter/illumination_strength = 0.5
 shader_parameter/band_spacing = 3.0
 shader_parameter/band_strength = 0.75
 
@@ -400,6 +460,7 @@ shader_parameter/sense_sphere_trailing_fade = 15.0
 shader_parameter/sense_sphere_leading_fade = 2.0
 shader_parameter/color = Color(0.21960784, 0.21960784, 0.21960784, 1)
 shader_parameter/illumination_color = Color(0, 0.6, 1, 1)
+shader_parameter/illumination_strength = 0.5
 shader_parameter/band_spacing = 3.0
 shader_parameter/band_strength = 0.75
 
@@ -410,6 +471,7 @@ shader_parameter/sense_sphere_trailing_fade = 15.0
 shader_parameter/sense_sphere_leading_fade = 2.0
 shader_parameter/color = Color(0.2763515, 0.38639548, 0.19139913, 1)
 shader_parameter/illumination_color = Color(0, 0.6, 1, 1)
+shader_parameter/illumination_strength = 0.5
 shader_parameter/band_spacing = 3.0
 shader_parameter/band_strength = 0.75
 
@@ -420,6 +482,7 @@ shader_parameter/sense_sphere_trailing_fade = 15.0
 shader_parameter/sense_sphere_leading_fade = 2.0
 shader_parameter/color = Color(0.30692276, 0.30692267, 0.3069227, 1)
 shader_parameter/illumination_color = Color(0, 0.6, 1, 1)
+shader_parameter/illumination_strength = 0.5
 shader_parameter/band_spacing = 3.0
 shader_parameter/band_strength = 0.75
 
@@ -430,6 +493,7 @@ shader_parameter/sense_sphere_trailing_fade = 15.0
 shader_parameter/sense_sphere_leading_fade = 2.0
 shader_parameter/color = Color(0.30692276, 0.30692267, 0.3069227, 1)
 shader_parameter/illumination_color = Color(0, 0.6, 1, 1)
+shader_parameter/illumination_strength = 0.5
 shader_parameter/band_spacing = 3.0
 shader_parameter/band_strength = 0.75
 
@@ -438,8 +502,9 @@ render_priority = 0
 shader = ExtResource("1_b8ka7")
 shader_parameter/sense_sphere_trailing_fade = 15.0
 shader_parameter/sense_sphere_leading_fade = 2.0
-shader_parameter/color = Color(0.30692276, 0.30692267, 0.3069227, 1)
+shader_parameter/color = Color(0.7792914, 0.7792914, 0.7792913, 1)
 shader_parameter/illumination_color = Color(0, 0.6, 1, 1)
+shader_parameter/illumination_strength = 0.5
 shader_parameter/band_spacing = 3.0
 shader_parameter/band_strength = 0.75
 
@@ -450,6 +515,7 @@ shader_parameter/sense_sphere_trailing_fade = 15.0
 shader_parameter/sense_sphere_leading_fade = 2.0
 shader_parameter/color = Color(0.30692276, 0.30692267, 0.3069227, 1)
 shader_parameter/illumination_color = Color(0, 0.6, 1, 1)
+shader_parameter/illumination_strength = 0.5
 shader_parameter/band_spacing = 3.0
 shader_parameter/band_strength = 0.75
 
@@ -458,6 +524,7 @@ shader_parameter/band_strength = 0.75
 [node name="the_object" type="CSGCombiner3D" parent="." unique_id=36094786]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0)
 use_collision = true
+script = ExtResource("1_868yc")
 
 [node name="thing" type="CSGCombiner3D" parent="the_object" unique_id=1941400860]
 transform = Transform3D(0.9659258, -0.1830127, 0.1830127, 0, 0.70710677, 0.70710677, -0.25881904, -0.68301266, 0.68301266, 0, 0, 0)
@@ -507,12 +574,12 @@ operation = 2
 size = Vector3(0.125, 0.08, 0.08)
 material = SubResource("StandardMaterial3D_e5vfs")
 
-[node name="core" type="CSGBox3D" parent="the_object/thing2" unique_id=606745034]
-transform = Transform3D(0.61237246, -0.7071068, -0.3535534, 0.61237246, 0.7071068, -0.3535534, 0.5, 0, 0.86602545, 0, 0, 0)
+[node name="core" type="CSGBox3D" parent="the_object" unique_id=606745034]
+transform = Transform3D(1, 0, 2.9802322e-08, 0, 1, 0, -2.9802322e-08, 0, 1, 0, 0, 0)
 size = Vector3(0.05, 0.05, 0.05)
 material = SubResource("StandardMaterial3D_jr0cg")
 
-[node name="OmniLight3D" type="OmniLight3D" parent="the_object/thing2/core" unique_id=2119268504]
+[node name="OmniLight3D" type="OmniLight3D" parent="the_object/core" unique_id=2119268504]
 transform = Transform3D(1, 0, -2.9802322e-08, 0, 1, 0, 2.9802322e-08, 0, 1, 0, 0, 0)
 omni_range = 0.5
 
@@ -1454,7 +1521,7 @@ material = SubResource("ShaderMaterial_uvvlq")
 [node name="CSGBox3D11" type="CSGBox3D" parent="area_2/A2_backrooms" unique_id=340414808]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.25, 1.5, -2.5)
 size = Vector3(4.5, 3, 0.5)
-material = SubResource("ShaderMaterial_uvvlq")
+material = SubResource("ShaderMaterial_8xx4g")
 
 [node name="CSGBox3D10" type="CSGBox3D" parent="area_2/A2_backrooms" unique_id=1647665406]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
@@ -1504,7 +1571,7 @@ material = SubResource("ShaderMaterial_uvvlq")
 [node name="wall_S" type="CSGBox3D" parent="area_2/A2_backrooms" unique_id=1629914830]
 transform = Transform3D(2.9802322e-08, 0, 1, 0, 1, 0, -1, 0, 2.9802322e-08, 5.4990005, 1.5, -5)
 size = Vector3(0.5, 3, 7)
-material = SubResource("ShaderMaterial_uvvlq")
+material = SubResource("ShaderMaterial_he712")
 
 [node name="wall_S2" type="CSGBox3D" parent="area_2/A2_backrooms" unique_id=181335128]
 transform = Transform3D(2.9802322e-08, 0, 1, 0, 1, 0, -1, 0, 2.9802322e-08, 5.9990005, 1.5, -7.5)
@@ -1690,8 +1757,8 @@ size = Vector3(2.5, 3, 3)
 material = SubResource("ShaderMaterial_5qyf4")
 
 [node name="CSGBox3D101" type="CSGBox3D" parent="area_2/lower_halls" unique_id=363501233]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 5.25, -1.5, 0.99953043)
-size = Vector3(0.001, 3, 13.5)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 6, -1.5, 0.9995304)
+size = Vector3(0.001, 3, 12)
 material = SubResource("ShaderMaterial_5qyf4")
 
 [node name="CSGBox3D24" type="CSGBox3D" parent="area_2/lower_halls" unique_id=1738677734]
@@ -1702,11 +1769,6 @@ material = SubResource("ShaderMaterial_5qyf4")
 [node name="CSGBox3D26" type="CSGBox3D" parent="area_2/lower_halls" unique_id=285507834]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 9.25, -1.5, -9.7499695)
 size = Vector3(2.5, 2.98, 0.5)
-material = SubResource("ShaderMaterial_5qyf4")
-
-[node name="CSGBox3D31" type="CSGBox3D" parent="area_2/lower_halls" unique_id=1346593637]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1.7499999, -1.5, 3.0517578e-05)
-size = Vector3(6, 2.98, 0.5)
 material = SubResource("ShaderMaterial_5qyf4")
 
 [node name="CSGBox3D55" type="CSGBox3D" parent="area_2/lower_halls" unique_id=1687618926]
@@ -1955,13 +2017,8 @@ size = Vector3(0.5, 2.98, 4)
 material = SubResource("ShaderMaterial_lamw7")
 
 [node name="CSGBox3D33" type="CSGBox3D" parent="area_2/lower_halls" unique_id=1154607111]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 5.5, -1.5, 2.0000305)
-size = Vector3(2, 2.98, 14)
-material = SubResource("ShaderMaterial_qd0e0")
-
-[node name="CSGBox3D98" type="CSGBox3D" parent="area_2/lower_halls" unique_id=1098436626]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1.75, -1.5, 2.9995308)
-size = Vector3(0.001, 3, 0.5)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 6, -1.5, 2.0000305)
+size = Vector3(2, 2.98, 13)
 material = SubResource("ShaderMaterial_qd0e0")
 
 [node name="CSGBox3D81" type="CSGBox3D" parent="area_2/lower_halls" unique_id=489910045]
@@ -2046,3 +2103,19 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 3
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.5, 0)
 light_energy = 10.0
 omni_range = 40.0
+
+[node name="AreaLight3D" type="AreaLight3D" parent="." unique_id=458887140]
+transform = Transform3D(1, 0, 0, 0, 0.02345416, 0.9997249, 0, -0.9997249, 0.02345416, 5, 5.855368, 4.4122367)
+area_range = 10.0
+
+[node name="AreaLight3D2" type="AreaLight3D" parent="." unique_id=43782699]
+transform = Transform3D(1, 0, 0, 0, 0.02345416, 0.9997249, 0, -0.9997249, 0.02345416, 5, 6.136125, -7.554934)
+area_range = 10.0
+
+[node name="AreaLight3D3" type="AreaLight3D" parent="." unique_id=1525920437]
+transform = Transform3D(1, 0, 0, 0, 0.02345416, 0.9997249, 0, -0.9997249, 0.02345416, -8.400001, 5.855368, 4.4122367)
+area_range = 10.0
+
+[node name="AreaLight3D4" type="AreaLight3D" parent="." unique_id=1200843808]
+transform = Transform3D(1, 0, 0, 0, 0.02345416, 0.9997249, 0, -0.9997249, 0.02345416, -8.400001, 6.136125, -7.554934)
+area_range = 10.0

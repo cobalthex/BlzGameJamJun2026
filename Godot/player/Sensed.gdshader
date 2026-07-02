@@ -9,10 +9,11 @@ uniform float sense_sphere_trailing_fade = 15.0;
 uniform float sense_sphere_leading_fade = 2.0;
 
 uniform vec3 color : source_color;
-uniform vec3 illumination_color: source_color = vec3(0.0, 0.6, 1.0);
+uniform vec3 illumination_color : source_color = vec3(0.0, 0.6, 1.0);
+uniform float illumination_strength = 0.5;
 
 uniform float band_spacing = 3.0;
-uniform float band_strength = 0.75;
+uniform float band_strength = 0.35;
 
 float calc_sense_mask(float dist)
 {
@@ -60,10 +61,11 @@ void fragment()
     //     dist_to_sense_sphere);
     // EMISSION = mix(flat_color, edge_color, edge_overlay) * (1.0 - sense_mask);
 
-    float stripes = 1.0 - band_strength * abs(fract(dist_to_sense_sphere / band_spacing) - 0.5) * 5.0;
+    float stripes = 1.0 - band_strength * abs(fract(dist_to_sense_sphere / band_spacing) - 1.0) * 5.0;
 
-    stripes = clamp(stripes, 0.0, 1.0);
-    ALBEDO = mix(color, illumination_color, sense_mask * stripes);
+    // stripes = clamp(stripes, 0.0, 1.0);
+    ALBEDO = mix(color, illumination_color, sense_mask * stripes * illumination_strength);
+    EMISSION = color;// * (1.0 - sense_mask);
 }
 
 void light()
