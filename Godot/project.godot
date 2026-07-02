@@ -13,7 +13,7 @@ config_version=5
 config/name="SolidPing"
 run/main_scene="uid://0ejjvoht1xdb"
 config/features=PackedStringArray("4.7", "C#", "Forward Plus")
-config/icon="res://icon.svg"
+config/windows_native_icon="res://SolidPing.ico"
 
 [display]
 

@@ -27,7 +27,7 @@ shader_parameter/illumination_strength = 0.5
 shader_parameter/band_spacing = 3.0
 shader_parameter/band_strength = 0.75
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_deujq"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1ih5d"]
 render_priority = 0
 shader = ExtResource("1_b8ka7")
 shader_parameter/sense_sphere_trailing_fade = 15.0
@@ -61,6 +61,17 @@ shader_parameter/band_spacing = 3.0
 shader_parameter/band_strength = 0.75
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_cc4nd"]
+render_priority = 0
+shader = ExtResource("1_b8ka7")
+shader_parameter/sense_sphere_trailing_fade = 15.0
+shader_parameter/sense_sphere_leading_fade = 2.0
+shader_parameter/color = Color(0.30692276, 0.30692267, 0.3069227, 1)
+shader_parameter/illumination_color = Color(0, 0.6, 1, 1)
+shader_parameter/illumination_strength = 0.5
+shader_parameter/band_spacing = 3.0
+shader_parameter/band_strength = 0.75
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_deujq"]
 render_priority = 0
 shader = ExtResource("1_b8ka7")
 shader_parameter/sense_sphere_trailing_fade = 15.0
@@ -228,6 +239,17 @@ shader = ExtResource("1_b8ka7")
 shader_parameter/sense_sphere_trailing_fade = 15.0
 shader_parameter/sense_sphere_leading_fade = 2.0
 shader_parameter/color = Color(0.30692276, 0.30692267, 0.3069227, 1)
+shader_parameter/illumination_color = Color(0, 0.6, 1, 1)
+shader_parameter/illumination_strength = 0.5
+shader_parameter/band_spacing = 3.0
+shader_parameter/band_strength = 0.75
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0tld5"]
+render_priority = 0
+shader = ExtResource("1_b8ka7")
+shader_parameter/sense_sphere_trailing_fade = 15.0
+shader_parameter/sense_sphere_leading_fade = 2.0
+shader_parameter/color = Color(0.7792914, 0.7792914, 0.7792913, 1)
 shader_parameter/illumination_color = Color(0, 0.6, 1, 1)
 shader_parameter/illumination_strength = 0.5
 shader_parameter/band_spacing = 3.0
@@ -453,23 +475,23 @@ shader_parameter/illumination_strength = 0.5
 shader_parameter/band_spacing = 3.0
 shader_parameter/band_strength = 0.75
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_3j61y"]
-render_priority = 0
-shader = ExtResource("1_b8ka7")
-shader_parameter/sense_sphere_trailing_fade = 15.0
-shader_parameter/sense_sphere_leading_fade = 2.0
-shader_parameter/color = Color(0.21960784, 0.21960784, 0.21960784, 1)
-shader_parameter/illumination_color = Color(0, 0.6, 1, 1)
-shader_parameter/illumination_strength = 0.5
-shader_parameter/band_spacing = 3.0
-shader_parameter/band_strength = 0.75
-
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_0wtyb"]
 render_priority = 0
 shader = ExtResource("1_b8ka7")
 shader_parameter/sense_sphere_trailing_fade = 15.0
 shader_parameter/sense_sphere_leading_fade = 2.0
 shader_parameter/color = Color(0.2763515, 0.38639548, 0.19139913, 1)
+shader_parameter/illumination_color = Color(0, 0.6, 1, 1)
+shader_parameter/illumination_strength = 0.5
+shader_parameter/band_spacing = 3.0
+shader_parameter/band_strength = 0.75
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_yaa23"]
+render_priority = 0
+shader = ExtResource("1_b8ka7")
+shader_parameter/sense_sphere_trailing_fade = 15.0
+shader_parameter/sense_sphere_leading_fade = 2.0
+shader_parameter/color = Color(0.7792914, 0.7792914, 0.7792913, 1)
 shader_parameter/illumination_color = Color(0, 0.6, 1, 1)
 shader_parameter/illumination_strength = 0.5
 shader_parameter/band_spacing = 3.0
@@ -486,12 +508,56 @@ shader_parameter/illumination_strength = 0.5
 shader_parameter/band_spacing = 3.0
 shader_parameter/band_strength = 0.75
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3j61y"]
+render_priority = 0
+shader = ExtResource("1_b8ka7")
+shader_parameter/sense_sphere_trailing_fade = 15.0
+shader_parameter/sense_sphere_leading_fade = 2.0
+shader_parameter/color = Color(0.6839442, 0.510609, 0, 1)
+shader_parameter/illumination_color = Color(0, 0.6, 1, 1)
+shader_parameter/illumination_strength = 0.5
+shader_parameter/band_spacing = 3.0
+shader_parameter/band_strength = 0.75
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_yiww5"]
+render_priority = 0
+shader = ExtResource("1_b8ka7")
+shader_parameter/sense_sphere_trailing_fade = 15.0
+shader_parameter/sense_sphere_leading_fade = 2.0
+shader_parameter/color = Color(0.7792914, 0.7792914, 0.7792913, 1)
+shader_parameter/illumination_color = Color(0, 0.6, 1, 1)
+shader_parameter/illumination_strength = 0.5
+shader_parameter/band_spacing = 3.0
+shader_parameter/band_strength = 0.75
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_u6vt6"]
+render_priority = 0
+shader = ExtResource("1_b8ka7")
+shader_parameter/sense_sphere_trailing_fade = 15.0
+shader_parameter/sense_sphere_leading_fade = 2.0
+shader_parameter/color = Color(0.7792914, 0.7792914, 0.7792913, 1)
+shader_parameter/illumination_color = Color(0, 0.6, 1, 1)
+shader_parameter/illumination_strength = 0.5
+shader_parameter/band_spacing = 3.0
+shader_parameter/band_strength = 0.75
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_co1u5"]
 render_priority = 0
 shader = ExtResource("1_b8ka7")
 shader_parameter/sense_sphere_trailing_fade = 15.0
 shader_parameter/sense_sphere_leading_fade = 2.0
-shader_parameter/color = Color(0.30692276, 0.30692267, 0.3069227, 1)
+shader_parameter/color = Color(0.34475783, 0.49715352, 0.64716744, 1)
+shader_parameter/illumination_color = Color(0, 0.6, 1, 1)
+shader_parameter/illumination_strength = 0.5
+shader_parameter/band_spacing = 3.0
+shader_parameter/band_strength = 0.75
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_221jk"]
+render_priority = 0
+shader = ExtResource("1_b8ka7")
+shader_parameter/sense_sphere_trailing_fade = 15.0
+shader_parameter/sense_sphere_leading_fade = 2.0
+shader_parameter/color = Color(0.7792914, 0.7792914, 0.7792913, 1)
 shader_parameter/illumination_color = Color(0, 0.6, 1, 1)
 shader_parameter/illumination_strength = 0.5
 shader_parameter/band_spacing = 3.0
@@ -503,6 +569,17 @@ shader = ExtResource("1_b8ka7")
 shader_parameter/sense_sphere_trailing_fade = 15.0
 shader_parameter/sense_sphere_leading_fade = 2.0
 shader_parameter/color = Color(0.7792914, 0.7792914, 0.7792913, 1)
+shader_parameter/illumination_color = Color(0, 0.6, 1, 1)
+shader_parameter/illumination_strength = 0.5
+shader_parameter/band_spacing = 3.0
+shader_parameter/band_strength = 0.75
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8sli2"]
+render_priority = 0
+shader = ExtResource("1_b8ka7")
+shader_parameter/sense_sphere_trailing_fade = 15.0
+shader_parameter/sense_sphere_leading_fade = 2.0
+shader_parameter/color = Color(0.9195461, 0.20243543, 0.18361902, 1)
 shader_parameter/illumination_color = Color(0, 0.6, 1, 1)
 shader_parameter/illumination_strength = 0.5
 shader_parameter/band_spacing = 3.0
@@ -611,7 +688,7 @@ use_collision = true
 [node name="floor" type="CSGBox3D" parent="area_1/room" unique_id=734764882]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.25, 0, 1.25)
 size = Vector3(36.5, 0.001, 34.5)
-material = SubResource("ShaderMaterial_deujq")
+material = SubResource("ShaderMaterial_1ih5d")
 
 [node name="ceiling" type="CSGBox3D" parent="area_1/room" unique_id=1094112231]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.125, 6.0005, 0)
@@ -1091,7 +1168,7 @@ material = SubResource("ShaderMaterial_eodhb")
 [node name="CSGBox3D13" type="CSGBox3D" parent="area_1/pillbox_2/CSGCombiner3D3" unique_id=899071796]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 17.499998, 0, -1.5000005)
 size = Vector3(2, 6, 3)
-material = SubResource("ShaderMaterial_eodhb")
+material = SubResource("ShaderMaterial_0tld5")
 
 [node name="CSGBox3D11" type="CSGBox3D" parent="area_1/pillbox_2/CSGCombiner3D3" unique_id=1776632498]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 9.999998, 1.25, 6.625)
@@ -1641,11 +1718,6 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -15.
 size = Vector3(0.001, 3, 2)
 material = SubResource("ShaderMaterial_grkdo")
 
-[node name="CSGBox3D70" type="CSGBox3D" parent="area_2/lower_halls" unique_id=516608782]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -18.5005, -1.5, 2.5000286)
-size = Vector3(0.001, 3, 2)
-material = SubResource("ShaderMaterial_3j61y")
-
 [node name="CSGBox3D93" type="CSGBox3D" parent="area_2/lower_halls" unique_id=2880884]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -15.999498, -1.5, -1)
 size = Vector3(0.001, 3, 4)
@@ -1654,7 +1726,7 @@ material = SubResource("ShaderMaterial_0wtyb")
 [node name="CSGBox3D72" type="CSGBox3D" parent="area_2/lower_halls" unique_id=871018238]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -6.5004997, -1.5, 11.750029)
 size = Vector3(0.001, 3, 4.5)
-material = SubResource("ShaderMaterial_0wtyb")
+material = SubResource("ShaderMaterial_yaa23")
 
 [node name="CSGBox3D15" type="CSGBox3D" parent="area_2/lower_halls" unique_id=1368978989]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -24.75, -1.75, 4.5000286)
@@ -1744,12 +1816,12 @@ material = SubResource("ShaderMaterial_lamw7")
 [node name="CSGBox3D35" type="CSGBox3D" parent="area_2/lower_halls" unique_id=1113582401]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 11.5, -1.5, -1.2499695)
 size = Vector3(0.5, 2.98, 5)
-material = SubResource("ShaderMaterial_lamw7")
+material = SubResource("ShaderMaterial_3j61y")
 
 [node name="CSGBox3D37" type="CSGBox3D" parent="area_2/lower_halls" unique_id=232433734]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 5.5, -1.5, -1.2499695)
 size = Vector3(0.5, 2.98, 3)
-material = SubResource("ShaderMaterial_lamw7")
+material = SubResource("ShaderMaterial_3j61y")
 
 [node name="CSGBox3D36" type="CSGBox3D" parent="area_2/lower_halls" unique_id=367460049]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2.5, -1.5, -2.2499695)
@@ -1784,12 +1856,12 @@ material = SubResource("ShaderMaterial_5qyf4")
 [node name="CSGBox3D65" type="CSGBox3D" parent="area_2/lower_halls" unique_id=693543613]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 8.25, -1.5, 12.7500305)
 size = Vector3(1.5, 2.98, 0.5)
-material = SubResource("ShaderMaterial_co1u5")
+material = SubResource("ShaderMaterial_yiww5")
 
 [node name="CSGBox3D63" type="CSGBox3D" parent="area_2/lower_halls" unique_id=1620467567]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 1, -1.5, 11.7500305)
 size = Vector3(2, 2.98, 0.5)
-material = SubResource("ShaderMaterial_co1u5")
+material = SubResource("ShaderMaterial_u6vt6")
 
 [node name="CSGBox3D64" type="CSGBox3D" parent="area_2/lower_halls" unique_id=443352738]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 1, -1.5, 9.2500305)
@@ -1836,11 +1908,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, -1.5, 13.499531)
 size = Vector3(2, 3, 0.001)
 material = SubResource("ShaderMaterial_j1np4")
 
-[node name="CSGBox3D76" type="CSGBox3D" parent="area_2/lower_halls" unique_id=247798179]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 12, -1.5, -0.00046920776)
-size = Vector3(2, 3, 0.001)
-material = SubResource("ShaderMaterial_j1np4")
-
 [node name="CSGBox3D80" type="CSGBox3D" parent="area_2/lower_halls" unique_id=660416249]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 6.75, -1.5, 3.9995308)
 size = Vector3(2, 3, 0.001)
@@ -1871,18 +1938,8 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -2, 
 size = Vector3(2, 3, 0.001)
 material = SubResource("ShaderMaterial_j1np4")
 
-[node name="CSGBox3D90" type="CSGBox3D" parent="area_2/lower_halls" unique_id=2064840683]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -9, -1.5, -0.00046920776)
-size = Vector3(2, 3, 0.001)
-material = SubResource("ShaderMaterial_j1np4")
-
 [node name="CSGBox3D85" type="CSGBox3D" parent="area_2/lower_halls" unique_id=550631993]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 3.5, -1.5, 7.999531)
-size = Vector3(2, 3, 0.001)
-material = SubResource("ShaderMaterial_j1np4")
-
-[node name="CSGBox3D79" type="CSGBox3D" parent="area_2/lower_halls" unique_id=672418040]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5, -1.5, 0.9995308)
 size = Vector3(2, 3, 0.001)
 material = SubResource("ShaderMaterial_j1np4")
 
@@ -1949,7 +2006,7 @@ material = SubResource("ShaderMaterial_co1u5")
 [node name="CSGBox3D48" type="CSGBox3D" parent="area_2/lower_halls" unique_id=972402629]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.25, -1.5, 2.0000305)
 size = Vector3(2.5, 2.98, 6)
-material = SubResource("ShaderMaterial_co1u5")
+material = SubResource("ShaderMaterial_221jk")
 
 [node name="CSGBox3D53" type="CSGBox3D" parent="area_2/lower_halls" unique_id=1645713347]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, -1.5, 4.2500305)
@@ -1959,7 +2016,7 @@ material = SubResource("ShaderMaterial_qd0e0")
 [node name="CSGBox3D50" type="CSGBox3D" parent="area_2/lower_halls" unique_id=318805350]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.25, -1.5, 9.5000305)
 size = Vector3(2.5, 2.98, 5)
-material = SubResource("ShaderMaterial_co1u5")
+material = SubResource("ShaderMaterial_221jk")
 
 [node name="CSGBox3D59" type="CSGBox3D" parent="area_2/lower_halls" unique_id=1052910096]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.25, -1.5, 10.5000305)
@@ -1992,7 +2049,7 @@ size = Vector3(2, 2.98, 5)
 material = SubResource("ShaderMaterial_5qyf4")
 
 [node name="CSGBox3D47" type="CSGBox3D" parent="area_2/lower_halls" unique_id=138186867]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -10.5, -1.5, 1.2500305)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -12.510942, -1.5, 1.2500306)
 size = Vector3(0.5, 2.98, 3)
 material = SubResource("ShaderMaterial_qd0e0")
 
@@ -2007,8 +2064,8 @@ size = Vector3(0.001, 3, 4.5)
 material = SubResource("ShaderMaterial_qd0e0")
 
 [node name="CSGBox3D52" type="CSGBox3D" parent="area_2/lower_halls" unique_id=1730043062]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -8.75, -1.5, 7.2500305)
-size = Vector3(0.5, 2.98, 4.5)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -7.5, -1.5, 7.2500305)
+size = Vector3(0.5, 2.98, 7)
 material = SubResource("ShaderMaterial_qd0e0")
 
 [node name="CSGBox3D13" type="CSGBox3D" parent="area_2/lower_halls" unique_id=1384305431]
@@ -2052,9 +2109,9 @@ size = Vector3(2, 2.98, 7.5)
 material = SubResource("ShaderMaterial_co1u5")
 
 [node name="CSGBox3D39" type="CSGBox3D" parent="area_2/lower_halls" unique_id=14734067]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 16.25, -1.5, 3.0392408e-05)
-size = Vector3(2, 2.98, 8.5)
-material = SubResource("ShaderMaterial_5qyf4")
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 18.5, -1.5, 3.0294057e-05)
+size = Vector3(2, 2.98, 4)
+material = SubResource("ShaderMaterial_8sli2")
 
 [node name="CSGBox3D12" type="CSGBox3D" parent="area_2/lower_halls" unique_id=588157554]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4, -1.5, -3.2499695)
